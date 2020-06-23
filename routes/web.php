@@ -18,4 +18,7 @@ Route::get("/test/hello","TestController@hello");
 //商品
 Route::any("/goods/detail","Goods\GoodsController@detail");//商品详情
 Route::get("/test/redis1","TestController@redis1");
-
+Route::get("/user/reg","User\IndexController@reg");
+Route::post("/user/reg","User\IndexController@regDo");
+Route::get("/user/login","User\IndexController@login");
+Route::post("/user/loginDo","User\IndexController@loginDo");
