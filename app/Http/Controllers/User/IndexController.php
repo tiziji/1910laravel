@@ -56,6 +56,16 @@ class IndexController extends Controller
         if($data['password']!=password_verify($data['password'],$res['password'])){
             return redirect('user/login')->with('msg','密码错误');
         }
-        return redirect('/');
+        setcookie('uid',$res->user_id,time()+3600,'/');
+        return redirect('user/center');
+    }
+
+    public function center(){
+        if(isset($_COOKIE['uid']) && isset($_COOKIE["user_name"])){
+           return redirect('user/center');
+        }else{
+            return redirect('user/login');
+        }
+        return view("user.center");
     }
 }

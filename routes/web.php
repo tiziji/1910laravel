@@ -22,3 +22,8 @@ Route::get("/user/reg","User\IndexController@reg");
 Route::post("/user/reg","User\IndexController@regDo");
 Route::get("/user/login","User\IndexController@login");
 Route::post("/user/loginDo","User\IndexController@loginDo");
+Route::get("/user/center","User\IndexController@center");
+
+
+Route::post("/api/user/reg","Api\UserController@reg");
+
