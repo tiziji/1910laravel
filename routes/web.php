@@ -26,4 +26,6 @@ Route::get("/user/center","User\IndexController@center");
 
 
 Route::post("/api/user/reg","Api\UserController@reg");
+Route::post("/api/user/login","Api\UserController@login");
+Route::get("/api/user/center","Api\UserController@center");
 
