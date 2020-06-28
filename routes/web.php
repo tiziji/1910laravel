@@ -28,4 +28,6 @@ Route::get("/user/center","User\IndexController@center");
 Route::post("/api/user/reg","Api\UserController@reg");
 Route::post("/api/user/login","Api\UserController@login");
 Route::get("/api/user/center","Api\UserController@center");
+Route::get("/api/my/orders","Api\UserController@orders");
+Route::get("/api/my/cart","Api\UserController@cart");
 
